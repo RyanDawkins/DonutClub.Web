@@ -8,21 +8,25 @@
 
     var vm = this;
     vm.submitSignin = submitSignin;
-    vm.signout = signout;
 
     function submitSignin() {
-
-      var promise = loginService.signin(vm.email, vm.password);
-
-      promise.then(function successfulSignIn(user){
+      loginService
+        .signin(vm.email, vm.password)
+        .then(function successfulSignIn(user){
         // Success
-      }, function failedSignin(message){
-        console.debug(message);
-        toaster.pop({
-          type: 'error',
-          body: message,
+        }, function failedSignin(message){
+          console.debug(message);
+          toaster.pop({
+            type: 'error',
+            body: message,
+          });
+        }).catch(function _catch(message){
+          console.debug(message);
+          toaster.pop({
+            type: 'error',
+            body: message,
+          });
         });
-      });
     }
   }
 

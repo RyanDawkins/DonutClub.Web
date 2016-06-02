@@ -7,7 +7,8 @@
   function firebaseAuthErrorFactory() {
 
     return {
-      decodeError: decodeError
+      decodeError: decodeError,
+      decodeErrorFromResponse: decodeErrorFromResponse,
     };
 
     function decodeError(error) {
@@ -23,6 +24,10 @@
           return "Incorrect email/password combo. Please try again."
       }
 
+    }
+
+    function decodeErrorFromResponse(response) {
+      var response = decodeError(response.code); console.debug(response); return response;
     }
 
   }

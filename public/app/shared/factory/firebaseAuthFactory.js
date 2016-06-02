@@ -28,7 +28,7 @@
 
     function signup(email, password) {
       // Method to sign up a user
-      
+      return firebase.auth().createUserWithEmailAndPassword(email, password);
     }
 
   }

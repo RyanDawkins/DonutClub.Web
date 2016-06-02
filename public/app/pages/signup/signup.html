@@ -3,11 +3,15 @@
   <form ng-submit="vm.submitSignup()">
     <div class="form-group">
       <label for="inputEmail">Email address</label>
-      <input ng-model="vm.email" type="email" class="form-control" id="inputEmail" placeholder="Email">
+      <input ng-model="vm.email" type="email" class="form-control" id="inputEmail" placeholder="Email" required>
     </div>
     <div class="form-group">
       <label for="inputPassword">Password</label>
-      <input ng-model="vm.password" type="password" class="form-control" id="inputPassword" placeholder="Password">
+      <input ng-model="vm.password" type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+    </div>
+    <div class="form-group">
+      <label for="inputConfirmPassword">Password</label>
+      <input ng-model="vm.confirm_password" type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password" required>
     </div>
     <a class="btn btn-success" href="/#/signup">
       <i class="fa fa-plus"></i> Create Account
