@@ -27,7 +27,7 @@
     }
 
     function decodeErrorFromResponse(response) {
-      var response = decodeError(response.code); console.debug(response); return response;
+      return decodeError(response.code);
     }
 
   }
