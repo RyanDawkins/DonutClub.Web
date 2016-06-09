@@ -21,7 +21,7 @@
         case "auth/user-not-found":
           return "The user does not exist";
         case "auth/wrong-password":
-          return "Incorrect email/password combo. Please try again."
+          return "Incorrect email/password combo. Please try again.";
       }
 
     }

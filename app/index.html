@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Donut Club</title>
+
+    <!-- build:css css/libs.css -->
+    <!-- Bootstrap -->
+    <link href="/..//node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- third party libs -->
+    <link href="/../node_modules/angularjs-toaster/toaster.css" rel="stylesheet" />
+
+    <!-- endbuild -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- build:css css/combined.css -->
+    <link href="/css/helpers.css" rel="stylesheet" />
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="app">
+
+    <toaster-container></toaster-container>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div ng-view></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js scripts/libs.js -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/../node_modules/jquery/dist/jquery.js"></script>
+
+    <!-- angular libs -->
+    <script src="/../node_modules/angular/angular.js"></script>
+    <script src="/../node_modules/angular-route/angular-route.js"></script>
+    <script src="/../node_modules/angular-animate/angular-animate.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/../node_modules/angularjs-toaster/toaster.js"></script>
+
+    <!-- firebase -->
+    <script src="/../node_modules/firebase/firebase.js"></script>
+
+    <!-- endbuild -->
+
+    <script src="//use.fontawesome.com/a34cbbc992.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA9Z979qFmodSHt6A5EzdqfsS1eE0Q9F3A",
+        authDomain: "donut-club.firebaseapp.com",
+        databaseURL: "https://donut-club.firebaseio.com",
+        storageBucket: "",
+      };
+    firebase.initializeApp(config);
+    </script>
+
+    <!-- build:js scripts/combined.js -->
+    <!-- app -->
+    <script src="/app.js"></script>
+    <script src="/routes.js"></script>
+    <script src="/settings.js"></script>
+
+    <!-- shared services -->
+    <script src="/shared/services/firebaseAuthErrorFactory.js"></script>
+    <script src="/shared/services/firebaseAuthFactory.js"></script>
+    <script src="/shared/services/firebasePromiseFactory.js"></script>
+    <script src="/shared/services/passwordService.js"></script>
+
+    <!-- dash -->
+    <script src="/pages/dash/dashController.js"></script>
+
+    <!-- login -->
+    <script src="/pages/login/loginService.js"></script>
+    <script src="/pages/login/loginController.js"></script>
+
+    <!-- signup -->
+    <script src="/pages/signup/signupService.js"></script>
+    <script src="/pages/signup/signupController.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>
